@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="img.png">
+<title>Surprise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stage">
+
+  <!-- ambient crumbs -->
+  <div class="crumb" style="top:8%; left:10%; animation-delay:0s;"></div>
+  <div class="crumb" style="top:70%; left:14%; animation-delay:2s; background:var(--lavender-deep);"></div>
+  <div class="crumb" style="top:20%; left:85%; animation-delay:1s; background:var(--gold-deep);"></div>
+  <div class="crumb" style="top:80%; left:88%; animation-delay:3s;"></div>
+  <div class="crumb" style="top:45%; left:6%; animation-delay:4s; background:var(--gold-deep);"></div>
+  <div class="crumb" style="top:50%; left:92%; animation-delay:1.5s; background:var(--lavender-deep);"></div>
+
+  
+  <section class="screen" id="cover-screen">
+    <div class="eyebrow pixel">A LITTLE SOMETHING FOR YOU</div>
+    <div class="gift" id="gift" title="tap to open">
+      <div class="gift-bow"></div>
+      <div class="gift-lid"></div>
+      <div class="gift-box"><div class="gift-ribbon-v"></div></div>
+    </div>
+    <p class="cover-title pixel">Surprise is waiting for you<span class="name" id="cover-name">FRIEND</span></p>
+    <button class="btn" id="open-btn">TAP TO OPEN</button>
+    <p class="hint">There's a cake inside. You'll need to actually blow the candles out with your mic</p>
+  </section>
+
+  
+  <section class="screen hidden" id="cake-screen">
+    <div class="cake-wrap">
+
+      <div class="candles" id="candles">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+      </div>
+
+      <div class="cake">
+        <div class="layer layer-top">
+          <div class="berries">
+            <div class="berry"></div>
+            <div class="berry"></div>
+            <div class="berry"></div>
+            <div class="berry"></div>
+          </div>
+        </div>
+        <div class="layer layer-mid">
+          <div class="sparkle" style="top:34px; left:20px;"></div>
+          <div class="sparkle" style="top:44px; left:120px;"></div>
+          <div class="sparkle" style="top:30px; left:220px;"></div>
+        </div>
+        <div class="layer layer-bottom">
+          <div class="sparkle" style="top:36px; left:60px;"></div>
+          <div class="sparkle" style="top:26px; left:180px;"></div>
+        </div>
+      </div>
+      <div class="plate"></div>
+    </div>
+
+
+    <p class="cake-title pixel" id="cake-instruction"><bold>MAKE A WISH</bold></p>
+    <p class="cake-sub">then blow into your mic to blow out the candles</p>
+
+    <div class="mic-zone">
+      <button class="mic-btn" id="mic-btn">
+        <span class="ring"></span>        
+      </button>
+      <div class="meter"><div class="meter-fill" id="meter-fill"></div></div>
+      <div class="status-line" id="status-line">tap the mic and blow</div>
+      <button class="btn secondary" id="fallback-btn">no mic? hold this instead</button>
+    </div>
+  </section>
+
+  <!-- ================= MESSAGE SCREEN ================= -->
+  <section class="screen hidden" id="message-screen">
+    <div class="card">
+      <p class="msg-title pixel">Happy Birthday Liam</p>
+      <p class="msg-body" id="msg-body">I hope you have the best birthday ever! I couldnt be there to get you a real cake, but I hope this one makes you smile. Its been my pleasure to be your friend, watching you grow and learn and become the amazing person you are. I hope this year is full of love, laughter, and all the things that make you happy. Happy birthday! (˶>⩊<˶)</p>
+      <button class="btn" id="replay-btn">ONE MORE WISH MAYBE?</button>
+    </div>
+  </section>
+
+</div>
+<script src="function.js"></script>
+</body>
+</html>s  
